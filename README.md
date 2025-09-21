@@ -1,6 +1,6 @@
 # Oscilloscope (EJ03)
 
-An embedded oscilloscope project designed to interface with a PC for real-time waveform display, built as part of a system-level verification effort. Developed using Arduino, MATLAB, and Python for visualization, with responsive hardware and software integration.
+An embedded oscilloscope project designed to interface with a PC for real-time waveform display. Developed using Arduino, MATLAB, and Python for visualization, with responsive hardware and software integration.
 
 ## Features
 
