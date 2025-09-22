@@ -1,6 +1,6 @@
 # README.md
 
-# Oscilloscope (EJ03)
+# Oscilloscope 
 
 An embedded oscilloscope project designed to interface with a PC for real-time waveform display. Developed using Arduino, MATLAB, and Python for visualization, with responsive hardware and software integration.
 
@@ -89,20 +89,6 @@ System inputs/outputs and requirements were verified through comprehensive testi
 - **Response Time:** <20ms for user interface interactions
 - **Voltage Resolution:** Determined by Arduino ADC (10-bit)
 - **Trigger Sensitivity:** Software-configurable threshold
-
-## Installation and Usage
-
-### Hardware Setup
-1. Connect Arduino to computer via USB
-2. Attach signal probes to designated input channels
-3. Verify power supply and safety switch functionality
-4. Connect signal sources within -5 - 5V range
-
-### Software Installation
-1. Clone repository to local system
-2. Install required dependencies (MATLAB toolboxes or Python packages)
-3. Configure serial port settings in software
-4. Launch desired GUI implementation (MATLAB or Python)
 
 ## Testing and Validation
 
