@@ -1,26 +1,41 @@
+# README.md
+
 # Oscilloscope (EJ03)
 
 An embedded oscilloscope project designed to interface with a PC for real-time waveform display. Developed using Arduino, MATLAB, and Python for visualization, with responsive hardware and software integration.
 
+## Authors
+- **Holden Cooper**  
+- **Alexander Reed**  
+- **Hugo Paulino Korte**
+
+## Table of Contents
+- [Features](#features)
+- [System-Level Testing](#system-level-testing)
+- [Demo Videos](#demo-videos)
+- [Software Implementation](#software-implementation)
+- [Hardware Artifacts](#hardware-artifacts)
+- [Repository Structure](#repository-structure)
+
 ## Features
 
-- Dual-channel signal capture (0–5V)
-- Trigger functionality with adjustable level
-- Scalable voltage and time axes (manual + autoset)
-- Pause/Resume waveform for precise measurement
-- Quick shut-off switch for safety
-- USB-powered (5V @ 300–400 mA)
-- MATLAB + Python GUI plotting support
-- Responsive UI (<20ms reaction time to button input)
+- **Dual-channel signal capture** (-5 – 5V input range)
+- **Trigger functionality** with adjustable level control
+- **Scalable voltage and time axes** (manual adjustment + autoset)
+- **Pause/Resume waveform** capability for precise measurement
+- **Quick shut-off switch** for safety compliance
+- **USB-powered operation** (5V @ 300–400 mA)
+- **MATLAB + Python GUI** plotting support
+- **Responsive user interface** (<20ms reaction time to button input)
 
 ## System-Level Testing
 
-System inputs/outputs and requirements were verified via:
+System inputs/outputs and requirements were verified through comprehensive testing:
 
-- Power Interface Validation
-- Probe Voltage Handling (0–5V, DC offset response)
-- Display UI/Plot Scaling and Trigger Tests
-- Engineering Requirements (connectivity, autoset, freeze, fast response)
+- **Power Interface Validation** - USB power supply verification and stability testing
+- **Probe Voltage Handling** - 0–5V range validation with DC offset response testing
+- **Display UI/Plot Scaling** - Scaling functionality and trigger level testing
+- **Engineering Requirements** - Connectivity, autoset functionality, freeze capability, and fast response verification
 
 ## Demo Videos
 
@@ -28,33 +43,82 @@ System inputs/outputs and requirements were verified via:
 - [Display/Interface Interaction](https://drive.google.com/file/d/10gETVLNk9-uiuTsQ3BNzPl2V_6j1PxNv/view?usp=sharing)
 - [Trigger, Scaling & Pause Test](https://drive.google.com/file/d/144kXtIBlEre2H5gJudbySwPas5wJp2iQ/view?usp=sharing)
 
-## Software Highlights
+## Software Implementation
 
-**MATLAB GUI:**  
-- Real-time plotting using serial data
-- Dynamic trigger level, autoscaling, and responsive logging
+### MATLAB GUI Implementation
+- **Real-time plotting** using serial data acquisition
+- **Dynamic trigger level** adjustment with visual feedback
+- **Autoscaling functionality** for optimal waveform display
+- **Responsive logging** system for user interactions
 
-**Python GUI:**  
-- Tkinter interface using Matplotlib
-- Identical plotting and functionality to MATLAB (slower performance)
+### Python GUI Implementation
+- **Tkinter interface** using Matplotlib for plotting
+- **Identical functionality** to MATLAB implementation
+- **Cross-platform compatibility** with slower performance compared to MATLAB
 
-## Artifacts
+## Hardware Artifacts
 
-- Arduino Schematic
-- PCB Layout + Design
-- Pseudocode for state management
-- CAD Enclosure Design
+**System Prototype:**
 
-## Authors
+<img width="161" height="210" alt="Oscilloscope Prototype Hardware" src="https://github.com/user-attachments/assets/691cc487-abe5-4199-be97-239549bf357a" />
 
-- Holden Cooper  
-- Alexander Reed  
-- Hugo Paulino Korte
+**PCB Layout and Design:**
 
-## Repo Contents
+<img width="382" height="246" alt="PCB Layout and Schematic Design" src="https://github.com/user-attachments/assets/efe00784-668f-417f-bf13-6776731c8e78" />
 
-- `matlab/` - MATLAB implementation of GUI
-- `python/` - Python implementation (Tkinter)
-- `pcb/` - Schematic & layout files
-- `cad/` - Enclosure 3D models
-- `test_docs/` - System verification documentation
+**Waveform Display Interface:**
+
+<img width="501" height="270" alt="Real-time Waveform Display" src="https://github.com/user-attachments/assets/9a91f9b3-88c2-4f9a-950d-aa7c4b9e1634" />
+
+## Technical Specifications
+
+### Hardware Requirements
+- **Microcontroller:** Arduino-compatible board
+- **Power Supply:** USB 5V (300-400mA current draw)
+- **Input Channels:** 2 analog inputs (0-5V range)
+- **Communication:** Serial interface at 115200 baud
+- **Safety Features:** Hardware power disconnect switch
+
+### Software Requirements
+- **MATLAB:** R2018b or later with Instrument Control Toolbox
+- **Python:** 3.7+ with matplotlib, numpy, pyserial, tkinter
+- **Operating System:** Windows, macOS, or Linux support
+
+### Performance Specifications
+- **Sample Rate:** Real-time continuous sampling
+- **Response Time:** <20ms for user interface interactions
+- **Voltage Resolution:** Determined by Arduino ADC (10-bit)
+- **Trigger Sensitivity:** Software-configurable threshold
+
+## Installation and Usage
+
+### Hardware Setup
+1. Connect Arduino to computer via USB
+2. Attach signal probes to designated input channels
+3. Verify power supply and safety switch functionality
+4. Connect signal sources within -5 - 5V range
+
+### Software Installation
+1. Clone repository to local system
+2. Install required dependencies (MATLAB toolboxes or Python packages)
+3. Configure serial port settings in software
+4. Launch desired GUI implementation (MATLAB or Python)
+
+## Testing and Validation
+
+The system has undergone comprehensive validation including:
+
+- **Interface Definition Testing** - All system interfaces verified against specifications
+- **Engineering Requirement Verification** - Each requirement tested with documented procedures
+- **Performance Benchmarking** - Response time and accuracy measurements
+- **Safety Compliance** - Power and signal handling safety verification
+
+All testing procedures and results are documented in the `test_docs/` directory with accompanying video demonstrations.
+
+## Contributing
+
+Contributions to improve functionality, performance, or documentation are welcome. Please ensure all changes maintain compatibility with existing hardware and software implementations.
+
+## License
+
+This project is developed for educational purposes. Please respect institutional guidelines regarding academic work usage and distribution.
